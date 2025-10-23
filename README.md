@@ -11,9 +11,7 @@ This repository accompanies the paper:
 
 ## 🔍 What is GLVQ?
 
-GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns  
-**group-specific lattice vector quantizers** to encode weights at 2–4 bits  
-while preserving accuracy and decoding efficiency.
+GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **group-specific lattice vector quantizers** to encode weights at 2–4 bits while preserving accuracy and decoding efficiency.
 
 
 
@@ -22,8 +20,7 @@ while preserving accuracy and decoding efficiency.
 ## 🚫 Code Release Status
 
 This repository currently hosts documentation only.  
-As this work is partially funded by **Alibaba Group**, the code release is pending  
-internal legal / compliance approval.
+As this work is partially funded by **Alibaba Group**, the code release is pending internal legal / compliance approval.
 
 - Status: **Under Alibaba legal/compliance review**
 - ETA: **Will be released once approval is granted**
