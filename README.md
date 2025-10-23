@@ -68,7 +68,8 @@ GLVQ achieves **lower perplexity** while maintaining **similar throughput**.
 
 ```bibtex
 @inproceedings{GLVQ_NeurIPS25,
-  title     = {Group-Specific Lattice Optimization for Low-Bit LLM Quantization},
+  title     = {Learning Grouped Lattice Vector Quantizers for Low-Bit LLM Compression},
+  author={Zhang, Xi and Wu, Xiaolin and Wang, Jiamang and Lin, Weisi},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   year      = {2025}
 }
