@@ -35,7 +35,7 @@ GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **
 
 <!-- ![GLVQ Overview](assets/glvq-overview.png) -->
 <p align="center">
-  <img src="assets/glvq-overview.png" width="70%">
+  <img src="assets/glvq-overview.png" width="80%">
 </p>
 
 
@@ -44,6 +44,8 @@ GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **
 
 ## 📊 Main Results (excerpt from Table 1 of paper)
 
+<div align="center">
+
 | Method | Bits | WikiText2 (2-70) ↓ | C4 (2-70) ↓ |
 |-------:|:----:|:------------------:|:-----------:|
 | FP16 | 16 | 3.12 | 4.97 |
@@ -51,6 +53,8 @@ GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **
 | QTIP | 2 | 3.78 | 5.56 |
 | **GLVQ-8D (ours)** | **2** | **3.62** | **5.25** |
 | **GLVQ-32D (ours)** | **2** | **3.36** | **5.04** |
+
+</div>
 
 GLVQ achieves **lower perplexity** while maintaining **similar throughput**.
 
