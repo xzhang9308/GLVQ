@@ -68,7 +68,7 @@ Discussions and potential collaborations are also welcome.
 ## 📌 Citation
 
 ```bibtex
-@inproceedings{GLVQ_NeurIPS25,
+@inproceedings{GLVQ,
   title = {Learning Grouped Lattice Vector Quantizers for Low-Bit LLM Compression},
   author = {Zhang, Xi and Wu, Xiaolin and Wang, Jiamang and Lin, Weisi},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
