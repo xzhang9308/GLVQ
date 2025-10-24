@@ -33,8 +33,10 @@ GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **
 
 ## 🧠 Conceptual Overview
 
-![GLVQ Overview](assets/glvq-overview.png)
-
+<!-- ![GLVQ Overview](assets/glvq-overview.png) -->
+<p align="center">
+  <img src="assets/glvq-overview.png" width="70%">
+</p>
 
 
 
