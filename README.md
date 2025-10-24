@@ -1,21 +1,17 @@
 # GLVQ — Learning Grouped Lattice Vector Quantizers for Low-Bit LLM Compression  
 
+<h5 align="center"> 
 
-This repository accompanies the paper:  
-**Learning Grouped Lattice Vector Quantizers for Low-Bit LLM Compression (GLVQ)**  
-**NeurIPS 2025**
+[![arXiv](https://img.shields.io/badge/GLVQ-xxxx.xxxxx-b31b1b.svg?logo=arXiv)]()
+[![GitHub](https://img.shields.io/badge/GitHub-Code-green?logo=github)]()
+[![License](https://img.shields.io/badge/License-Other-blue)]()
+ <br>
 
+</h5>
 
-
----
-
-## 🔍 What is GLVQ?
-
-GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **group-specific lattice vector quantizers** to encode weights at 2–4 bits while preserving accuracy and decoding efficiency.
+Welcome to the official code repository for NeurIPS 2025 paper "[**Learning Grouped Lattice Vector Quantizers for Low-Bit LLM Compression**]()".
 
 
-
----
 
 ## 🚫 Code Release Status
 
@@ -28,7 +24,12 @@ As this work is partially funded by **Alibaba Group**, the code release is pendi
 Please **watch / star** this repo to get notified when the code becomes available.
 
 
----
+
+## 🔍 What is GLVQ?
+
+GLVQ is a **post-training quantization (PTQ)** framework for LLMs that learns **group-specific lattice vector quantizers** to encode weights at 2–4 bits while preserving accuracy and decoding efficiency.
+
+
 
 ## 🧠 Conceptual Overview
 
@@ -37,7 +38,7 @@ Please **watch / star** this repo to get notified when the code becomes availabl
 
 
 
----
+
 
 ## 📊 Main Results (excerpt from Table 1 of paper)
 
@@ -53,13 +54,16 @@ GLVQ achieves **lower perplexity** while maintaining **similar throughput**.
 
 
 
----
+## 🔜 TODOs
+- [ ] Release training/testing codes.
 
-## 📄 Paper
 
-(coming after NeurIPS camera-ready)
+## 📂 Contact
+If you have further questions, please open an issue or contact <xi.zhang@ntu.edu.sg>.
 
----
+Discussions and potential collaborations are also welcome.
+
+
 
 ## 📌 Citation
 
