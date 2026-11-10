@@ -1,0 +1,10 @@
+torch==2.13.0
+numpy==1.26.4
+transformers==4.43.4
+datasets==2.19.0
+pyarrow==20.0.0
+accelerate==0.29.3
+safetensors==0.4.3
+sentencepiece==0.2.0
+protobuf>=4.25.3,<6
+tqdm>=4.66,<5

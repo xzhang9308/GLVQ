@@ -1,0 +1,15 @@
+{
+  "profile": "mistral7b",
+  "model": "/path/to/model",
+  "output": "./runs/mistral7b",
+  "redpajama": "/path/to/redpajama-arrow-directory",
+  "c4": "/path/to/c4-validation.arrow",
+  "wiki": "/path/to/wikitext-test.arrow",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "accuracy": false
+}

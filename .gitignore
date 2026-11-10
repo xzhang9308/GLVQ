@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+config.json
+runs/
+outputs/
+data/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.arrow
+*.log
+*.jsonl
+.DS_Store

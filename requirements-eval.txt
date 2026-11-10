@@ -1,0 +1,3 @@
+-r requirements.txt
+lm_eval==0.4.4
+peft==0.11.1
