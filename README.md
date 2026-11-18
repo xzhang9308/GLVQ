@@ -68,12 +68,14 @@ Two-sided block-2048 Hadamard
   → d8 E8P / full generator fitting (group size 128, uniform 2-bit codes)
   → block reconstruction
   → P-only E2E: 5 epochs
-  → extended fixed-code E2E: 10 epochs
+  → extended fixed-code E2E: 5 epochs
 ```
 
 [`recipe.json`](recipe.json) contains PTQ settings, including top-8 E8P candidate
-search and 20×10 fitting limits with early stopping. E2E uses LR 1e-6, effective
-batch 8, microbatch 1, and seed 42.
+search and 20×10 fitting limits with early stopping. Both E2E stages use a learning rate of `1e-5` and run for 5 epochs
+(1,280 optimizer updates per stage), with effective batch 8, microbatch 1,
+and seed 42. Extended E2E starts from the final P-only checkpoint. Use a new
+output directory when switching from the previous E2E recipe.
 
 ## Installation
 

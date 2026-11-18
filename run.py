@@ -13,6 +13,8 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parent
+E2E_EPOCHS = 5
+E2E_STEPS = E2E_EPOCHS * 256
 PROFILES = {
     "mistral7b": ("mistral", "MistralDecoderLayer", 8192, 16),
     "llama2-7b": ("llama", "LlamaDecoderLayer", 4096, 128),
@@ -187,9 +189,9 @@ def commands(config):
             ptq_cmd += ["--" + key, value]
     add("ptq", ptq_cmd)
     evaluate("ptq", ptq)
-    for name, source, destination, epochs in (
-        ("p-only", ptq, p_only, 5),
-        ("extended", exported, extended, 10),
+    for name, source, destination in (
+        ("p-only", ptq, p_only),
+        ("extended", exported, extended),
     ):
         if name == "extended":
             export("export-p-only", ptq, p_only / "final_model_state_dict.pt", exported)
@@ -218,7 +220,7 @@ def commands(config):
             42,
             "--update_codebooks_and_scales",
             "--lr",
-            "1e-6",
+            "1e-5",
             "--adam_beta1",
             0.9,
             "--adam_beta2",
@@ -228,9 +230,9 @@ def commands(config):
             "--microbatch_size",
             1,
             "--max_epochs",
-            epochs,
+            E2E_EPOCHS,
             "--max_optimizer_steps",
-            epochs * 256,
+            E2E_STEPS,
             "--max_grad_norm",
             1.0,
             "--gradient_checkpointing",
@@ -296,7 +298,7 @@ def validate_stage(name, output, layers):
     if name == "ptq":
         return complete_layers(output / "ptq/checkpoint", layers)
     if name in ("p-only", "extended"):
-        return training_complete(output / name / "checkpoint", 1280 if name == "p-only" else 2560)
+        return training_complete(output / name / "checkpoint", E2E_STEPS)
     if name.startswith("export-"):
         return exported_layers(output / ("model" if name == "export-final" else "p-only-export"), layers)
     path = output / name / "results.json"

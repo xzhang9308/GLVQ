@@ -40,9 +40,11 @@ def test_fixed_recipe_and_final_checkpoint_handoff(tmp_path, profile):
     ptq = plan["ptq"]
     assert ptq[ptq.index("--glvq_codebook") + 1] == "e8p"
     assert ptq[ptq.index("--glvq_dimension") + 1] == "8"
-    for stage, steps in (("p-only", "1280"), ("extended", "2560")):
+    for stage in ("p-only", "extended"):
         cmd = plan[stage]
-        assert cmd[cmd.index("--max_optimizer_steps") + 1] == steps
+        assert cmd[cmd.index("--lr") + 1] == "1e-5"
+        assert cmd[cmd.index("--max_epochs") + 1] == "5"
+        assert cmd[cmd.index("--max_optimizer_steps") + 1] == "1280"
         assert "--update_codes" not in cmd and "--offload_student_params" not in cmd
     assert "--update_non_quantized_parameters" not in plan["p-only"]
     assert "--update_non_quantized_parameters" in plan["extended"]
